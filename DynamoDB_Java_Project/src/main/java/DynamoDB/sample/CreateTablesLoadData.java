@@ -266,6 +266,19 @@ public class CreateTablesLoadData {
                     Arrays.asList("Red", "Black")))
                 .withString("ProductCategory", "Bicycle");
             table.putItem(item);
+            
+             item = new Item()
+                .withPrimaryKey("Id", 206)
+                .withString("Title", "Sachin")
+                .withString("Description", "Sachin Description")
+                .withString("BicycleType", "Hybrid")
+                .withString("Brand", "Brand-Company C")
+                .withNumber("Price", 500)
+                .withStringSet("Color", new HashSet<String>(
+                    Arrays.asList("Red", "Black")))
+                .withString("ProductCategory", "Bicycle");
+            table.putItem(item);
+
 
         } catch (Exception e) {
             System.err.println("Failed to create item in " + tableName);
